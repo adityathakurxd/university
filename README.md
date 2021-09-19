@@ -1,16 +1,17 @@
-# university
+# University
+Open Source app to view Free resources available online.
 
-Open Source app to find Free resources online.
+## Stack
 
-## Getting Started
+## Documents related to the project:
 
-This project is a starting point for a Flutter application.
+- [LICENSE](./LICENSE)
+- [CODE OF CONDUCT](./CODE_OF_CONDUCT.md)
+- [CONTRIBUTION GUIDELINES](./CONTRIBUTING.MD)
+- [CHANGELOG](./CHANGELOG.md)
 
-A few resources to get you started if this is your first Flutter project:
+#### Contributors👩‍💻👨‍💻 :
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<a href="https://github.com/adityathakurxd/university/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=adityathakurxd/university" />
+</a>
