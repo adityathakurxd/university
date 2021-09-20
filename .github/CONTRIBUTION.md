@@ -4,7 +4,6 @@ Hello 👋. Welcome to this Opensource project specific for university student f
 | Index                                                         |
 | ------------------------------------------------------------- |
 | [Contributing to this repo](#contributing-to-this-repository) |
-| [Index (readme) Files](#index-readme-files)|
 | [Basics of Git & GitHub](#basics-of-git-and-github)           |
 
 ## Contributing to this repository
