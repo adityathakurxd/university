@@ -19,7 +19,6 @@ Please follow the [contributing guidelines](./.github/CONTRIBUTION.md) to contri
 - [CHANGELOG](./CHANGELOG.md)
 
 #### Contributors👩‍💻👨‍💻 :
-
 <a href="https://github.com/adityathakurxd/university/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=adityathakurxd/university" />
+  <img src="https://contrib.rocks/image?repo=adityathakurxd/university" />
 </a>
