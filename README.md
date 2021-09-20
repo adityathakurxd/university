@@ -8,11 +8,14 @@ Open Source app to view Free resources available online.
 ## Stack
 Flutter, Dart
 
+## Contributing Guidelines
+Please follow the [contributing guidelines](./.github/CONTRIBUTION.md) to contribute to the project.
+
 ## Documents related to the project:
 
 - [LICENSE](./LICENSE)
 - [CODE OF CONDUCT](./CODE_OF_CONDUCT.md)
-- [CONTRIBUTION GUIDELINES](./CONTRIBUTING.MD)
+- [CONTRIBUTION GUIDELINES](./.github/CONTRIBUTION.md)
 - [CHANGELOG](./CHANGELOG.md)
 
 #### Contributors👩‍💻👨‍💻 :
