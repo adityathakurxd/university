@@ -1,5 +1,5 @@
 # Contribution Guidelines
-Hello 👋. Welcome to this Opensource project specific for university student fluent with flutter.
+Hello 👋. Welcome to this Opensource project specific for university student fluent with Flutter.
 
 | Index                                                         |
 | ------------------------------------------------------------- |
