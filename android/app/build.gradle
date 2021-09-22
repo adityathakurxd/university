@@ -47,6 +47,7 @@ android {
         applicationId "com.aditya.university"
         minSdkVersion 16
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
