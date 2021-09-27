@@ -1,12 +1,16 @@
 # University
-Open Source app to view Free resources available online.
+Open Source app to view Free resources available online. The resources would be condesed into roadmaps provided by mentors skilled in their domains.
+<p>
+Join the discussion on <b>Discord</b>:                                                                                                        
+<a href="https://discord.com/invite/mx5tjevvQd">
+    <img src="https://img.shields.io/discord/768695045259264011?logo=discord&style=for-the-badge&color=blue" />
+  </a>
+</p>
+ 
 
-## Design Inspiration
-![a54518d8dd0394a49ef0d14ed2c1f9b7](https://user-images.githubusercontent.com/53579386/133935473-845c5320-02b0-4d5f-933c-27d3ba347ba2.png)
+## Design
+![designs](https://user-images.githubusercontent.com/53579386/134544982-cbdb6739-76a8-4319-b680-306a24c75438.png)
 <hr>
-
-## Stack
-Flutter, Dart
 
 ## Contributing Guidelines
 Please follow the [contributing guidelines](./.github/CONTRIBUTION.md) to contribute to the project.
@@ -22,3 +26,4 @@ Please follow the [contributing guidelines](./.github/CONTRIBUTION.md) to contri
 <a href="https://github.com/adityathakurxd/university/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=adityathakurxd/university" />
 </a>
+
