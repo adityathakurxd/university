@@ -5,17 +5,17 @@ class FirestoreService {
   final String uid;
 
   // // Sets the avatar download url
-  // Future<void> setAvatarReference(AvatarReference avatarReference) async {
+  // Future<void> setUserData(UserData userData) async {
   //   final path = FirestorePath.avatar(uid);
   //   final reference = FirebaseFirestore.instance.doc(path);
-  //   await reference.set(avatarReference.toMap());
+  //   await reference.set(userData.toMap());
   // }
   //
   // // Reads the current avatar download url
-  // Stream<AvatarReference> avatarReferenceStream() {
+  // Stream<UserData> userDataStream() {
   //   final path = FirestorePath.avatar(uid);
   //   final reference = FirebaseFirestore.instance.doc(path);
   //   final snapshots = reference.snapshots();
-  //   return snapshots.map((snapshot) => AvatarReference.fromMap(snapshot.data()));
+  //   return snapshots.map((snapshot) => userData.fromMap(snapshot.data()));
   // }
 }
