@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "682616789876",
+    "project_id": "freeroadmaps",
+    "storage_bucket": "freeroadmaps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682616789876:android:6d4b2f5f57f98d68476a21",
+        "android_client_info": {
+          "package_name": "com.aditya.university"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682616789876-s94l20atludhe45kdufqitedvln8s8f6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aditya.university",
+            "certificate_hash": "0eb46f41730b22233e1cadc5bd2460945df21615"
+          }
+        },
+        {
+          "client_id": "682616789876-g7k3vttmv1mk6217k3r0mlkfq0bq76v1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7qgf253wLcy9L3abmWuMNPUz4i1RRH2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682616789876-g7k3vttmv1mk6217k3r0mlkfq0bq76v1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
