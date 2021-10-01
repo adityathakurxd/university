@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MentorWidget(),
+      home: SignInScreen(),
     );
     // return FutureBuilder(
     //   future: Firebase.initializeApp(),
