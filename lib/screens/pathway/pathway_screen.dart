@@ -8,7 +8,6 @@ class PathwayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    
     return Scaffold(
       appBar: AppBar(
           toolbarHeight: screenHeight * 0.12,
