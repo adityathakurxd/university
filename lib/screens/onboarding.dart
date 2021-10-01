@@ -135,7 +135,7 @@ class OnBoarding extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Sign in with Mail',
+                        'Sign in with Anonymously',
                         style: TextStyle(
                             fontSize: 24
                         ),
