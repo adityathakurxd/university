@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MentorScreen(),
+      home: SignInScreen(),
     );
     // return FutureBuilder(
     //   future: Firebase.initializeApp(),
