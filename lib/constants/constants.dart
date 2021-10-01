@@ -20,3 +20,16 @@ TextStyle kLightTitleText = GoogleFonts.poppins(
   color: kPrimaryColor,
   fontSize: 20.0,
 );
+
+TextStyle kPageTitleText = GoogleFonts.poppins(
+  color: kAccentColor,
+  fontSize: 30.0,
+);
+TextStyle kPageSubTitleText = GoogleFonts.poppins(
+  color: kAccentColor,
+  fontSize: 18.0,
+);
+TextStyle kSubTitleMentorText = GoogleFonts.poppins(
+  color: kAccentColor,
+  fontSize: 16.0,
+);
