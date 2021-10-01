@@ -29,3 +29,7 @@ TextStyle kPageSubTitleText = GoogleFonts.poppins(
   color: kAccentColor,
   fontSize: 18.0,
 );
+TextStyle kSubTitleMentorText = GoogleFonts.poppins(
+  color: kAccentColor,
+  fontSize: 16.0,
+);
