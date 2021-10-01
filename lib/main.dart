@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:university/screens/auth/sign_in_screen.dart';
+import 'package:university/screens/mentor/mentor_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SignInScreen(),
+      home: MentorScreen(),
     );
     // return FutureBuilder(
     //   future: Firebase.initializeApp(),
