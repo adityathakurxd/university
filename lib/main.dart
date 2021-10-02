@@ -38,6 +38,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       home: Scaffold(
         body: screens[_selectedIndex],
         bottomNavigationBar: BottomNavBar(
@@ -45,6 +46,7 @@ class _MyAppState extends State<MyApp> {
           onTap: _onItemTapped,
         ),
       ),
+
     );
     // return FutureBuilder(
     //   future: Firebase.initializeApp(),
