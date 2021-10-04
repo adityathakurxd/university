@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +42,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only( left: 10.0),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,10 +55,27 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 ),
               ),
               GestureDetector(
-                child: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  backgroundImage: NetworkImage(userData.imgurl.isEmpty?"https://static.thenounproject.com/png/4035889-200.png": userData.imgurl),
+                child: CachedNetworkImage(
+                  imageUrl: userData.imgurl.isEmpty?"https://static.thenounproject.com/png/4035889-200.png": userData.imgurl,
+                  imageBuilder: (context, imageProvider) => Container(
+                    width: 48.0,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: imageProvider, fit: BoxFit.scaleDown),
+                    ),
+                  ),
+                  placeholder: (context, url) =>
+                      const CircularProgressIndicator(),
+                  errorWidget: (context, url, error) =>
+                      const Icon(Icons.account_circle),
                 ),
+                // child: CircleAvatar(
+                //   backgroundColor: Colors.white,
+
+                //   backgroundImage: NetworkImage(userData.imgurl.isEmpty?"https://static.thenounproject.com/png/4035889-200.png": userData.imgurl),
+                // ),
               ),
             ],
           ),
@@ -84,7 +102,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
         backgroundColor: kPrimaryColor,
         selectedIconTheme: const IconThemeData(size: 28.0),
         selectedItemColor: kAccentColor,
-        selectedLabelStyle: kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
+        selectedLabelStyle:
+            kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
         unselectedItemColor: kGrey,
         showUnselectedLabels: false,
       ),

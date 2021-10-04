@@ -6,7 +6,7 @@ class FirebaseAuthService {
   final _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  //TODO: Use a default image and name if user decides to sign in anonymously
+  // Use a default image and name if user decides to sign in anonymously
   UserData _userFromFirebase(User? user) {
     return UserData(
         uid: user!.uid,

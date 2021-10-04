@@ -11,9 +11,9 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: kWhite,
       body: ListView(
         padding: const EdgeInsets.all(16),
-        children: [
+        children: const [
           CustomContainers(),
-         const SizedBox(height: 15,),
+         SizedBox(height: 15,),
           CustomContainers(),
         ],
       ),

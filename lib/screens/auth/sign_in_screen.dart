@@ -27,17 +27,18 @@ class SignInScreen extends StatelessWidget {
       final service = Provider.of<FirestoreService>(context, listen: false);
       await service.updateUserData(user);
     } catch (e) {
-      print(e);
+     // print(e);
     }
   }
 
   Future<void> _signInAnonymously(BuildContext context) async {
     try {
       final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+      // ignore: unused_local_variable
       final user = await auth.signInAnonymously();
       //User data not added to Firestore in case of Anonymous sign in.
     } catch (e) {
-      print(e);
+      //print(e);
     }
   }
 

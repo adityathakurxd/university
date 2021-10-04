@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class MentorWidget extends StatefulWidget {
@@ -30,15 +31,30 @@ class _MentorWidgetState extends State<MentorWidget> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.green[500],
-                        radius: 50,
-                        child: const CircleAvatar(
-                          backgroundImage: NetworkImage(
-                              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/198992295/original/72778b2af854b02465f98ca7d9e6c4c1c34f701b/draw-you-an-custom-anime-profile-picture-or-character.png"),
-                          radius: 100,
-                        ), //CircleAvatar
+                      CachedNetworkImage(
+                        imageUrl:
+                            "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/198992295/original/72778b2af854b02465f98ca7d9e6c4c1c34f701b/draw-you-an-custom-anime-profile-picture-or-character.png",
+                        imageBuilder: (context, imageProvider) => Container(
+                          width: 80.0,
+                          height: 80.0,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                                image: imageProvider, fit: BoxFit.cover),
+                          ),
+                        ),
+                        placeholder: (context, url) => const SizedBox(),
+                        errorWidget: (context, url, error) => Container(),
                       ),
+                      // CircleAvatar(
+                      //   backgroundColor: Colors.green[500],
+                      //   radius: 50,
+                      //   child: const CircleAvatar(
+                      //     backgroundImage: NetworkImage(
+                      //         "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/198992295/original/72778b2af854b02465f98ca7d9e6c4c1c34f701b/draw-you-an-custom-anime-profile-picture-or-character.png"),
+                      //     radius: 100,
+                      //   ), //CircleAvatar
+                      // ),
                       const SizedBox(
                         height: 30,
                       ),
