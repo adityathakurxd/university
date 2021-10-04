@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:provider/provider.dart';
 import 'package:university/constants/constants.dart';
-import 'package:university/screens/home/home_screen.dart';
 import 'package:university/services/firebase_auth_service.dart';
 import 'package:university/services/firestore_service.dart';
 
@@ -28,17 +27,18 @@ class SignInScreen extends StatelessWidget {
       final service = Provider.of<FirestoreService>(context, listen: false);
       await service.updateUserData(user);
     } catch (e) {
-      print(e);
+     // print(e);
     }
   }
 
   Future<void> _signInAnonymously(BuildContext context) async {
     try {
       final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+      // ignore: unused_local_variable
       final user = await auth.signInAnonymously();
       //User data not added to Firestore in case of Anonymous sign in.
     } catch (e) {
-      print(e);
+      //print(e);
     }
   }
 
