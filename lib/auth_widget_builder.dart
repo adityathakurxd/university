@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:university/models/user_model.dart';
 import 'package:university/services/firebase_auth_service.dart';
+import 'package:university/services/firestore_service.dart';
 
 class AuthWidgetBuilder extends StatelessWidget {
   const AuthWidgetBuilder({Key? key, required this.builder}) : super(key: key);
@@ -20,9 +21,10 @@ class AuthWidgetBuilder extends StatelessWidget {
           providers: [
             //Provides user data across screens
             Provider<UserData>.value(value: user),
-            // Provider<FirestoreService>(
-            //   create: (_) => FirestoreService(uid: user.uid),
-            // ),
+            //Provides Firestore service across screens
+            Provider<FirestoreService>(
+              create: (_) => FirestoreService(uid: user.uid),
+            ),
           ],
           child: builder(context, snapshot),
         );
