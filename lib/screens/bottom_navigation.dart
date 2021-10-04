@@ -55,7 +55,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
               ),
               GestureDetector(
                 child: CircleAvatar(
-                  backgroundImage: NetworkImage(userData.imgurl),
+                  backgroundColor: Colors.white,
+                  backgroundImage: NetworkImage(userData.imgurl.isEmpty?"https://static.thenounproject.com/png/4035889-200.png": userData.imgurl),
                 ),
               ),
             ],
@@ -81,7 +82,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
         backgroundColor: kPrimaryColor,
-        selectedIconTheme: IconThemeData(size: 27.0),
+        selectedIconTheme: const IconThemeData(size: 28.0),
         selectedItemColor: kAccentColor,
         selectedLabelStyle: kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
         unselectedItemColor: kGrey,
