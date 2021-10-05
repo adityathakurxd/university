@@ -9,6 +9,8 @@ class MentorWidget extends StatefulWidget {
 
 class _MentorWidgetState extends State<MentorWidget> {
   int _index = 1;
+
+
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -70,7 +72,7 @@ class _MentorWidgetState extends State<MentorWidget> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
-                            Icon(Icons.touch_app),
+                            Icon(Icons.touch_app,),
                             Text('View'),
                           ],
                         ),
