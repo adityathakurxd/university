@@ -14,7 +14,6 @@ class HomeScreen extends StatelessWidget {
         children: [
           CustomContainers(),
          const SizedBox(height: 15,),
-          CustomContainers(),
         ],
       ),
     );
