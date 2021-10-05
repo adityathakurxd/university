@@ -57,7 +57,13 @@ class Mentors extends StatelessWidget {
                         colors: [kWhite, kWhite],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                      )
+                      ),
+                    boxShadow: const [BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 12,
+                      spreadRadius: 2.0,
+                      offset: Offset(0, 6),
+                    )]
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -70,6 +76,54 @@ class Mentors extends StatelessWidget {
                               width: 90,),
                             SizedBox(width: 10.0,),
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text("Name of Mentor",
+                                  style: TextStyle(fontSize: 25.0),),
+                                SizedBox(height: 10.0,),
+                                Text("Title Text",
+                                  style: TextStyle(fontSize: 20.0),),
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 10.0,),
+              InkWell(
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                      ),
+                      borderRadius: const BorderRadius.all(
+                          Radius.circular(10.0)),
+                      gradient: LinearGradient(
+                        colors: [kWhite, kWhite],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
+                      boxShadow: const [BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 12,
+                        offset: Offset(0, 6),
+                      )]
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Image.network(
+                              'https://www.linkpicture.com/q/3135715.png',
+                              width: 90,),
+                            SizedBox(width: 10.0,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text("Name of Mentor",
                                   style: TextStyle(fontSize: 25.0),),
@@ -98,48 +152,12 @@ class Mentors extends StatelessWidget {
                         colors: [kWhite, kWhite],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                      )
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Image.network(
-                              'https://www.linkpicture.com/q/3135715.png',
-                              width: 90,),
-                            SizedBox(width: 10.0,),
-                            Column(
-                              children: const [
-                                Text("Name of Mentor",
-                                  style: TextStyle(fontSize: 25.0),),
-                                SizedBox(height: 10.0,),
-                                Text("Title Text",
-                                  style: TextStyle(fontSize: 20.0),)
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(width: 10.0,),
-              InkWell(
-                child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.black,
                       ),
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(10.0)),
-                      gradient: LinearGradient(
-                        colors: [kWhite, kWhite],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      )
+                      boxShadow: const [BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 12,
+                        offset: Offset(0, 6),
+                      )]
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -152,6 +170,8 @@ class Mentors extends StatelessWidget {
                               width: 90,),
                             SizedBox(width: 10.0,),
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
                               children: const [
                                 Text("Name of Mentor",
                                   style: TextStyle(fontSize: 25.0),),
@@ -169,7 +189,8 @@ class Mentors extends StatelessWidget {
               )
             ],
           ),
-        )
+        ),
+        SizedBox(height: 10.0,)
       ],
     );
   }
