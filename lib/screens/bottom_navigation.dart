@@ -80,7 +80,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
-        backgroundColor: kPrimaryColor,
+        backgroundColor: kWhite,
         selectedIconTheme: IconThemeData(size: 27.0),
         selectedItemColor: kAccentColor,
         selectedLabelStyle: kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
