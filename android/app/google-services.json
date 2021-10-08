@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "682616789876-bn00cpqqg1deot09hc562655oqs0ekeu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aditya.university",
+            "certificate_hash": "7010bcf1460846fdb9734ed81ee9545cd58d5b2c"
+          }
+        },
+        {
           "client_id": "682616789876-s94l20atludhe45kdufqitedvln8s8f6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
