@@ -5,6 +5,8 @@ import 'package:university/constants/constants.dart';
 import 'package:university/models/user_model.dart';
 import 'package:university/screens/home/home_screen.dart';
 import 'package:university/screens/mentor/mentor_screen.dart';
+import 'package:university/services/firebase_auth_service.dart';
+import 'package:university/services/firestore_service.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -54,6 +56,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 ),
               ),
               GestureDetector(
+                onTap: () async {
+                  final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+                  await auth.signOut();
+                },
                 child: CircleAvatar(
                   backgroundImage: NetworkImage(userData.imgurl),
                 ),

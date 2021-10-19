@@ -11,8 +11,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^3.1.1
   firebase_core: ^1.6.0
-  flutter:
-    sdk: flutter
   flutter_svg: ^0.22.0
   flutter_swiper_null_safety: ^1.0.2
   google_fonts: ^2.1.0
@@ -20,11 +18,16 @@ dependencies:
   provider: ^6.0.0
   url_launcher: ^6.0.12
 
+  flutter:
+    sdk: flutter
+
 dev_dependencies:
   flutter_lints: ^1.0.0
+  flutter_launcher_icons: ^0.9.2
+
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.9.2
+
 flutter_icons:
   image_path: "assets/images/logo.jpeg"
   android: "launcher_icon"
