@@ -120,7 +120,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               : (userData.name == '')
                                   ? 'Anonymous'
                                   : userData.name,
-                          style: kTitleText,
+                          style: kProfileNameText,
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -196,7 +196,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 height: 20,
                               ),
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
                                 child: Container(
                                   height:
                                       MediaQuery.of(context).size.height * 0.4,
