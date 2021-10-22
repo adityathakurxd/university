@@ -25,7 +25,7 @@ class _MentorWidgetState extends State<MentorWidget> {
               child: Card(
                 elevation: 6,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
+                    borderRadius: BorderRadius.circular(10)),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
