@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:university/constants/constants.dart';
 import 'package:university/models/embed_model.dart';
 import 'package:university/services/embed_service.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class PathwayScreen extends StatelessWidget {
   const PathwayScreen({Key? key}) : super(key: key);
@@ -93,6 +92,6 @@ class PathwayScreen extends StatelessWidget {
     );
   }
 
-  void _launchURL(String url) async =>
-      await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
+  // void _launchURL(String url) async =>
+  //     await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
 }
