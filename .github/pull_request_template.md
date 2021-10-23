@@ -36,4 +36,4 @@ Does your PR require plugin users to manually update their apps to accommodate y
 - [ ] No, this is *not* a breaking change.
 
 <!-- Links -->
-[Contributor Guide]: https://github.com/adityathakurxd/university/blob/main/.github/CONTRIBUTION.md
+[Contributor Guide]: CONTRIBUTING.md
