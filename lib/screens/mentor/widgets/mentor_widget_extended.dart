@@ -12,7 +12,9 @@ class MentorWidgetExtended extends StatelessWidget {
       height: 200,
       width: MediaQuery.of(context).size.width - 20,
       child: Card(
-        shape: const StadiumBorder(),
+        shape:RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ) ,
         elevation: 2,
         child: Container(
           child: Row(
