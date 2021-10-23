@@ -25,7 +25,7 @@ class SignInScreen extends StatelessWidget {
       final auth = Provider.of<FirebaseAuthService>(context, listen: false);
       final user = await auth.signInWithGoogle();
     } catch (e) {
-      developer.log(e);
+      developer.log(e.toString());
     }
   }
 
@@ -35,7 +35,7 @@ class SignInScreen extends StatelessWidget {
       final user = await auth.signInAnonymously();
       //User data not added to Firestore in case of Anonymous sign in.
     } catch (e) {
-      developer.log(e);
+      developer.log(e.toString());
     }
   }
 

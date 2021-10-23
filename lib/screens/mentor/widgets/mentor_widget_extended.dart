@@ -8,6 +8,7 @@ class MentorWidgetExtended extends StatelessWidget {
   const MentorWidgetExtended({Key? key}) : super(key: key);
 
   @override
+  // ignore: dead_code
   Widget build(BuildContext context) {
     return SizedBox(
       height: 200,
@@ -30,55 +31,54 @@ class MentorWidgetExtended extends StatelessWidget {
                     image: DecorationImage(
                         image: NetworkImage(imageUrl), fit: BoxFit.cover)),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "Mentor Name",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(
-                      height: 6,
-                    ),
-                    const Text(
-                      "Flutter Developer",
-                      style: TextStyle(fontSize: 15),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: FaIcon(FontAwesomeIcons.github),
-                          iconSize: 30,
-                          color: Colors.black,
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: FaIcon(FontAwesomeIcons.linkedin),
-                          iconSize: 30,
-                          color: Colors.blue[800],
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: FaIcon(FontAwesomeIcons.instagram),
-                          iconSize: 30,
-                          color: Colors.deepPurpleAccent,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Mentor Name",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                  const Text(
+                    "Flutter Developer",
+                    style: TextStyle(fontSize: 15),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: FaIcon(FontAwesomeIcons.github),
+                        iconSize: 30,
+                        color: Colors.black,
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: FaIcon(FontAwesomeIcons.linkedin),
+                        iconSize: 30,
+                        color: Colors.blue[800],
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: FaIcon(FontAwesomeIcons.instagram),
+                        iconSize: 30,
+                        color: Colors.deepPurpleAccent,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
