@@ -6,8 +6,6 @@ import 'package:university/models/user_model.dart';
 import 'package:university/screens/home/home_screen.dart';
 import 'package:university/screens/mentor/mentor_screen.dart';
 import 'package:university/screens/profile/profile_screen.dart';
-import 'package:university/services/firebase_auth_service.dart';
-import 'package:university/services/firestore_service.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -95,7 +93,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
         backgroundColor: kWhite,
-        selectedIconTheme: IconThemeData(size: 27.0),
+        selectedIconTheme: const IconThemeData(size: 27.0),
         selectedItemColor: kAccentColor,
         selectedLabelStyle:
             kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),

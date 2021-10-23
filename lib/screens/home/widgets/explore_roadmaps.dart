@@ -12,12 +12,9 @@ class ExploreRoadmaps extends StatelessWidget {
         Row(
           children: [
             Container(
-              margin: EdgeInsets.all(8),
+              margin: const EdgeInsets.all(8),
               height: 25,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width * 0.70,
+              width: MediaQuery.of(context).size.width * 0.70,
               child: const Text(
                 "Explore Roadmaps",
                 style: TextStyle(
@@ -40,23 +37,21 @@ class ExploreRoadmaps extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 10),
-        Container(
+        SizedBox(
           height: 250,
-
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
               InkWell(
                 child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(20.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
                       gradient: LinearGradient(
                         colors: [kLightRed, kAccentColor],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                      )
-                  ),
+                      )),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
@@ -70,36 +65,34 @@ class ExploreRoadmaps extends StatelessWidget {
                                       color: kPrimaryColor)),
                               Text('by Aditya Thakur',
                                   style:
-                                  kLightTitleText.copyWith(color: kBlack)),
-                              SizedBox(
+                                      kLightTitleText.copyWith(color: kBlack)),
+                              const SizedBox(
                                 height: 130.0,
                               ),
                               Text(
                                 ' 13 Resources',
-                                style: kSubTitleText.copyWith(color: kBlack, fontSize: 15.0),
-
+                                style: kSubTitleText.copyWith(
+                                    color: kBlack, fontSize: 15.0),
                               ),
                             ])
                       ],
                     ),
                   ),
                 ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
+                onTap: () => launch(
+                    'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
               ),
-              SizedBox(width: 10.0),
+              const SizedBox(width: 10.0),
               InkWell(
                 child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(20.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
                       gradient: LinearGradient(
                         colors: [kLightRed, kAccentColor],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                      )
-                  ),
+                      )),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
@@ -110,10 +103,10 @@ class ExploreRoadmaps extends StatelessWidget {
                           children: [
                             Text('Learn Flutter',
                                 style:
-                                kTitleText.copyWith(color: kPrimaryColor)),
+                                    kTitleText.copyWith(color: kPrimaryColor)),
                             Text('by Aditya Thakur',
                                 style: kLightTitleText.copyWith(color: kBlack)),
-                            SizedBox(
+                            const SizedBox(
                               height: 130.0,
                             ),
                             Text(
@@ -126,22 +119,20 @@ class ExploreRoadmaps extends StatelessWidget {
                     ),
                   ),
                 ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
+                onTap: () => launch(
+                    'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
               ),
-              SizedBox(width: 10.0),
+              const SizedBox(width: 10.0),
               InkWell(
                 child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(20.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
                       gradient: LinearGradient(
                         colors: [kLightRed, kAccentColor],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                      )
-                  ),
+                      )),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
@@ -152,10 +143,10 @@ class ExploreRoadmaps extends StatelessWidget {
                           children: [
                             Text('Learn Flutter',
                                 style:
-                                kTitleText.copyWith(color: kPrimaryColor)),
+                                    kTitleText.copyWith(color: kPrimaryColor)),
                             Text('by Aditya Thakur',
                                 style: kLightTitleText.copyWith(color: kBlack)),
-                            SizedBox(
+                            const SizedBox(
                               height: 130.0,
                             ),
                             Text(
@@ -168,22 +159,20 @@ class ExploreRoadmaps extends StatelessWidget {
                     ),
                   ),
                 ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
+                onTap: () => launch(
+                    'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
               ),
-              SizedBox(width: 10.0),
+              const SizedBox(width: 10.0),
               InkWell(
                 child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(10.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(10.0)),
                       gradient: LinearGradient(
                         colors: [kLightRed, kAccentColor],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                      )
-                  ),
+                      )),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
@@ -194,10 +183,10 @@ class ExploreRoadmaps extends StatelessWidget {
                           children: [
                             Text('Learn Flutter',
                                 style:
-                                kTitleText.copyWith(color: kPrimaryColor)),
+                                    kTitleText.copyWith(color: kPrimaryColor)),
                             Text('by Aditya Thakur',
                                 style: kLightTitleText.copyWith(color: kBlack)),
-                            SizedBox(
+                            const SizedBox(
                               height: 130.0,
                             ),
                             Text(
@@ -210,9 +199,8 @@ class ExploreRoadmaps extends StatelessWidget {
                     ),
                   ),
                 ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
+                onTap: () => launch(
+                    'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
               )
             ],
           ),
