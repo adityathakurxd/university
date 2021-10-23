@@ -24,8 +24,6 @@ class SignInScreen extends StatelessWidget {
     try {
       final auth = Provider.of<FirebaseAuthService>(context, listen: false);
       final user = await auth.signInWithGoogle();
-      final service = Provider.of<FirestoreService>(context, listen: false);
-      await service.updateUserData(user);
     } catch (e) {
       //print(e);
     }
