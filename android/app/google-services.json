@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "682616789876-pgftugdfmvs7g1l1hntepkt4d37nqrur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aditya.university",
+            "certificate_hash": "8b3de013250244b7ad4e77d002e51509e597eb51"
+          }
+        },
+        {
           "client_id": "682616789876-s94l20atludhe45kdufqitedvln8s8f6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -45,6 +53,13 @@
             {
               "client_id": "682616789876-g7k3vttmv1mk6217k3r0mlkfq0bq76v1.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "682616789876-oecnkpj72r3n8jna6dc7f8uld6grt0i3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.typeform"
+              }
             }
           ]
         }
