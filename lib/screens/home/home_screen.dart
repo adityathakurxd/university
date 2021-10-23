@@ -9,19 +9,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: kWhite,
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
           ExploreRoadmaps(),
-          SizedBox(height: 20.0,),
+          SizedBox(
+            height: 20.0,
+          ),
           Mentors()
         ],
       ),
     );
-
   }
-  }
-
-
+}

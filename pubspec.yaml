@@ -30,9 +30,9 @@ dev_dependencies:
     sdk: flutter
 
 flutter_icons:
-  image_path: "assets/images/logo.jpeg"
-  android: "launcher_icon"
-  ios: true
+  android: true
+  image_path_ios: "assets/launcher/university_logo.png"
+  image_path_android: "assets/launcher/university_logo.png"
 
 flutter:
   uses-material-design: true
