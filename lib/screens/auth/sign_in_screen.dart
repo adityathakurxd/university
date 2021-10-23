@@ -4,6 +4,7 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:provider/provider.dart';
 import 'package:university/constants/constants.dart';
 import 'package:university/services/firebase_auth_service.dart';
+import 'dart:developer' as developer;
 
 const List<String> images = [
   "assets/svg/roadmap.svg",
@@ -24,7 +25,7 @@ class SignInScreen extends StatelessWidget {
       final auth = Provider.of<FirebaseAuthService>(context, listen: false);
       final user = await auth.signInWithGoogle();
     } catch (e) {
-      rethrow;
+      developer.log(e);
     }
   }
 
@@ -34,7 +35,7 @@ class SignInScreen extends StatelessWidget {
       final user = await auth.signInAnonymously();
       //User data not added to Firestore in case of Anonymous sign in.
     } catch (e) {
-      rethrow;
+      developer.log(e);
     }
   }
 
