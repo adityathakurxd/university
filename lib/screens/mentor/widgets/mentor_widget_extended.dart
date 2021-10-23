@@ -57,19 +57,19 @@ class MentorWidgetExtended extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: FaIcon(FontAwesomeIcons.github),
+                        icon: const FaIcon(FontAwesomeIcons.github),
                         iconSize: 30,
                         color: Colors.black,
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: FaIcon(FontAwesomeIcons.linkedin),
+                        icon: const FaIcon(FontAwesomeIcons.linkedin),
                         iconSize: 30,
                         color: Colors.blue[800],
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: FaIcon(FontAwesomeIcons.instagram),
+                        icon: const FaIcon(FontAwesomeIcons.instagram),
                         iconSize: 30,
                         color: Colors.deepPurpleAccent,
                       ),
