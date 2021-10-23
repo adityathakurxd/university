@@ -5,6 +5,9 @@ import 'package:university/constants/constants.dart';
 import 'package:university/models/user_model.dart';
 import 'package:university/screens/home/home_screen.dart';
 import 'package:university/screens/mentor/mentor_screen.dart';
+import 'package:university/screens/profile/profile_screen.dart';
+import 'package:university/services/firebase_auth_service.dart';
+import 'package:university/services/firestore_service.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -41,7 +44,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only( left: 10.0),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,6 +57,17 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 ),
               ),
               GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(
+                      name: userData.name,
+                      isMentor: false,
+                      imgUrl: userData.imgurl,
+                      email: userData.email,
+                    ),
+                  ),
+                ),
                 child: CircleAvatar(
                   backgroundImage: NetworkImage(userData.imgurl),
                 ),
@@ -83,7 +97,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
         backgroundColor: kWhite,
         selectedIconTheme: IconThemeData(size: 27.0),
         selectedItemColor: kAccentColor,
-        selectedLabelStyle: kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
+        selectedLabelStyle:
+            kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
         unselectedItemColor: kGrey,
         showUnselectedLabels: false,
       ),

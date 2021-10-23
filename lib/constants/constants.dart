@@ -37,3 +37,14 @@ TextStyle kSubTitleMentorText = GoogleFonts.poppins(
   color: kAccentColor,
   fontSize: 16.0,
 );
+
+TextStyle kLogoutText = GoogleFonts.poppins(
+  color: kAccentColor,
+  fontSize: 16.0,
+);
+
+TextStyle kProfileNameText = GoogleFonts.poppins(
+  color: kGrey,
+  fontSize: 18.0,
+  fontWeight: FontWeight.bold,
+);
