@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:university/constants/constants.dart';
+import 'package:university/screens/home/widgets/explore_pathway.dart';
 import 'package:university/screens/home/widgets/explore_roadmaps.dart';
 import 'package:university/screens/home/widgets/mentors.dart';
 
@@ -17,7 +18,8 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          Mentors()
+          Mentors(),
+          ExplorePathWay(),
         ],
       ),
     );

@@ -4,7 +4,6 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:provider/provider.dart';
 import 'package:university/constants/constants.dart';
 import 'package:university/services/firebase_auth_service.dart';
-import 'package:university/services/firestore_service.dart';
 
 const List<String> images = [
   "assets/svg/roadmap.svg",
