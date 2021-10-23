@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:university/constants/constants.dart';
-import 'package:university/screens/home/widgets/custom_home_page_widgets.dart';
 import 'package:university/screens/home/widgets/explore_roadmaps.dart';
 import 'package:university/screens/home/widgets/mentors.dart';
 
@@ -13,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: kWhite,
       body: ListView(
         padding: const EdgeInsets.all(16),
-        children: [
+        children: const [
           ExploreRoadmaps(),
           SizedBox(
             height: 20.0,
