@@ -152,9 +152,9 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ),
                                   IconButton(
                                     iconSize: 30,
-                                    icon: const FaIcon(
+                                    icon: FaIcon(
                                       FontAwesomeIcons.linkedin,
-                                      color: Colors.blue,
+                                      color: Colors.blue[800],
                                     ),
                                     onPressed: () {
                                       launch('mentorData.linkedinLink');
