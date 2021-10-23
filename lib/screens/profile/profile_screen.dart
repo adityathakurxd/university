@@ -62,7 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
         actions: [
           widget.isMentor
-              ? Text("")
+              ? const Text("")
               : TextButton(
                   onPressed: () {
                     showLogoutAlert(context);
@@ -108,7 +108,7 @@ class _ProfilePageState extends State<ProfilePage> {
               child: Column(
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         const SizedBox(
@@ -184,7 +184,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               )
                             : Row(),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Column(
                             children: [
                               Text(
@@ -197,7 +197,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
-                                child: Container(
+                                child: SizedBox(
                                   height:
                                       MediaQuery.of(context).size.height * 0.4,
                                   width: MediaQuery.of(context).size.width,
@@ -245,7 +245,7 @@ class _ProfilePageState extends State<ProfilePage> {
   showLogoutAlert(BuildContext context) {
     // set up the buttons
     Widget cancelButton = TextButton(
-      child: Text("Cancel"),
+      child: const Text("Cancel"),
       onPressed: () {
         Navigator.of(context).pop();
       },
@@ -264,8 +264,8 @@ class _ProfilePageState extends State<ProfilePage> {
     );
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
-      title: Text("Confirm"),
-      content: Text("Are you sure you want to logout?"),
+      title: const Text("Confirm"),
+      content: const Text("Are you sure you want to logout?"),
       actions: [
         cancelButton,
         continueButton,
