@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:university/constants/constants.dart';
+import 'package:university/data/explore_roadmap_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ExploreRoadmaps extends StatelessWidget {
@@ -12,12 +13,9 @@ class ExploreRoadmaps extends StatelessWidget {
         Row(
           children: [
             Container(
-              margin: EdgeInsets.all(8),
+              margin: const EdgeInsets.all(8),
               height: 25,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width * 0.70,
+              width: MediaQuery.of(context).size.width * 0.70,
               child: const Text(
                 "Explore Roadmaps",
                 style: TextStyle(
@@ -40,66 +38,25 @@ class ExploreRoadmaps extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 10),
-        Container(
+        SizedBox(
           height: 250,
-
-          child: ListView(
+          child: ListView.builder(
+            itemCount: ExploreRoadMapModel.exploreList.length,
             scrollDirection: Axis.horizontal,
-            children: [
-              InkWell(
+            itemBuilder: (context, index) {
+              final data = ExploreRoadMapModel.exploreList;
+              return InkWell(
                 child: Container(
+                  width: 260,
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(20.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
                       gradient: LinearGradient(
                         colors: [kLightRed, kAccentColor],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                      )
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Learn Flutter',
-                                  style: kTitleText.copyWith(
-                                      color: kPrimaryColor)),
-                              Text('by Aditya Thakur',
-                                  style:
-                                  kLightTitleText.copyWith(color: kBlack)),
-                              SizedBox(
-                                height: 130.0,
-                              ),
-                              Text(
-                                ' 13 Resources',
-                                style: kSubTitleText.copyWith(color: kBlack, fontSize: 15.0),
-
-                              ),
-                            ])
-                      ],
-                    ),
-                  ),
-                ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
-              ),
-              SizedBox(width: 10.0),
-              InkWell(
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(20.0)),
-                      gradient: LinearGradient(
-                        colors: [kLightRed, kAccentColor],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      )
-                  ),
+                      )),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
@@ -108,17 +65,18 @@ class ExploreRoadmaps extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Learn Flutter',
+                            Text(data[index].title,
                                 style:
-                                kTitleText.copyWith(color: kPrimaryColor)),
-                            Text('by Aditya Thakur',
+                                    kTitleText.copyWith(color: kPrimaryColor)),
+                            Text(data[index].subTitle,
                                 style: kLightTitleText.copyWith(color: kBlack)),
-                            SizedBox(
+                            const SizedBox(
                               height: 130.0,
                             ),
                             Text(
-                              '13 Resources',
-                              style: kSubTitleText.copyWith(color: kBlack),
+                              ' ${data[index].resources} Resources',
+                              style: kSubTitleText.copyWith(
+                                  color: kBlack, fontSize: 15.0),
                             ),
                           ],
                         )
@@ -126,95 +84,10 @@ class ExploreRoadmaps extends StatelessWidget {
                     ),
                   ),
                 ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
-              ),
-              SizedBox(width: 10.0),
-              InkWell(
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(20.0)),
-                      gradient: LinearGradient(
-                        colors: [kLightRed, kAccentColor],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      )
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Learn Flutter',
-                                style:
-                                kTitleText.copyWith(color: kPrimaryColor)),
-                            Text('by Aditya Thakur',
-                                style: kLightTitleText.copyWith(color: kBlack)),
-                            SizedBox(
-                              height: 130.0,
-                            ),
-                            Text(
-                              '13 Resources',
-                              style: kSubTitleText.copyWith(color: kBlack),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
-              ),
-              SizedBox(width: 10.0),
-              InkWell(
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(10.0)),
-                      gradient: LinearGradient(
-                        colors: [kLightRed, kAccentColor],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      )
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Learn Flutter',
-                                style:
-                                kTitleText.copyWith(color: kPrimaryColor)),
-                            Text('by Aditya Thakur',
-                                style: kLightTitleText.copyWith(color: kBlack)),
-                            SizedBox(
-                              height: 130.0,
-                            ),
-                            Text(
-                              '13 Resources',
-                              style: kSubTitleText.copyWith(color: kBlack),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                onTap: () =>
-                    launch(
-                        'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
-              )
-            ],
+                onTap: () => launch(
+                    'https://adityathakurxd.medium.com/srm-one-314f8691b18b'),
+              );
+            },
           ),
         ),
       ],

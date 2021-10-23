@@ -41,7 +41,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only( left: 10.0),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,9 +81,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
         backgroundColor: kWhite,
-        selectedIconTheme: IconThemeData(size: 27.0),
+        selectedIconTheme: const IconThemeData(size: 27.0),
         selectedItemColor: kAccentColor,
-        selectedLabelStyle: kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
+        selectedLabelStyle:
+            kSubTitleText.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
         unselectedItemColor: kGrey,
         showUnselectedLabels: false,
       ),
