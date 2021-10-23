@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MentorWidgetExtended extends StatelessWidget {
   final imageUrl =
@@ -12,9 +13,9 @@ class MentorWidgetExtended extends StatelessWidget {
       height: 200,
       width: MediaQuery.of(context).size.width - 20,
       child: Card(
-        shape:RoundedRectangleBorder(
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
-        ) ,
+        ),
         elevation: 2,
         child: Container(
           child: Row(
@@ -55,19 +56,23 @@ class MentorWidgetExtended extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        InkWell(
-                          onTap: () {},
-                          child: Image.asset(
-                            'assets/github_icon.png',
-                          ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(FontAwesomeIcons.github),
+                          iconSize: 30,
+                          color: Colors.black,
                         ),
-                        InkWell(
-                          onTap: () {},
-                          child: Image.asset('assets/linkedin_icon.png'),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(FontAwesomeIcons.linkedin),
+                          iconSize: 30,
+                          color: Colors.blue[800],
                         ),
-                        InkWell(
-                          onTap: () {},
-                          child: Image.asset('assets/instagram_icon.png'),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(FontAwesomeIcons.instagram),
+                          iconSize: 30,
+                          color: Colors.deepPurpleAccent,
                         ),
                       ],
                     )
