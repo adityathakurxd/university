@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:university/constants/constants.dart';
-import 'package:university/models/embed_model.dart';
 import 'package:university/services/embed_service.dart';
 
-class PathwayScreen extends StatelessWidget {
+class PathwayScreen extends StatefulWidget {
   const PathwayScreen({Key? key}) : super(key: key);
 
+  @override
+  State<PathwayScreen> createState() => _PathwayScreenState();
+}
+
+class _PathwayScreenState extends State<PathwayScreen> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -25,73 +29,85 @@ class PathwayScreen extends StatelessWidget {
             ),
           )),
       body: FutureBuilder(
-        future: EmbedService().getData('https://youtu.be/VY6003vijLw'),
+        future: EmbedService().getMetaData(
+            'https://medium.com/swlh/my-top-4-most-read-medium-essays-of-the-year-557dae4055a3'),
         builder: (context, snapshot) {
           if (snapshot.data == null) {
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
-          final medaData = snapshot.data as MetaModel;
+          final data = snapshot.data as Map<String, String?>;
           return ListView.builder(
-              itemCount: 10,
-              padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-              itemBuilder: (context, index) {
-                return Row(children: [
-                  Column(
-                    children: [
-                      Container(
-                        //VERTICAL LINE
-                        width: 2,
-                        height: screenHeight * 0.30,
-                        color: index == 0 ? kPrimaryColor : kAccentColor,
-                      ),
-                      Container(
-                          //CIRCULAR ICON
-                          padding: const EdgeInsets.all(5.0),
-                          margin: const EdgeInsets.only(left: 5.0, right: 5.0),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50.0),
-                              color: kAccentColor),
-                          child: Icon(Icons.lightbulb, color: kPrimaryColor)),
-                      Container(
-                        //VERTICAL LINE
-                        width: 2,
-                        height: screenHeight * 0.055,
-                        color: kAccentColor,
-                      ),
-                    ],
-                  ),
-                  Expanded(
+            itemCount: 10,
+            padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+            itemBuilder: (context, index) {
+              return Row(children: [
+                Column(
+                  children: [
+                    Container(
+                      //VERTICAL LINE
+                      width: 2,
+                      height: screenHeight * 0.30,
+                      color: index == 0 ? kPrimaryColor : kAccentColor,
+                    ),
+                    Container(
+                        //CIRCULAR ICON
+                        padding: const EdgeInsets.all(5.0),
+                        margin: const EdgeInsets.only(left: 5.0, right: 5.0),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50.0),
+                            color: kAccentColor),
+                        child: Icon(Icons.lightbulb, color: kPrimaryColor)),
+                    Container(
+                      //VERTICAL LINE
+                      width: 2,
+                      height: screenHeight * 0.055,
+                      color: kAccentColor,
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      launch(data['url'].toString());
+                    },
                     child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey.withOpacity(0.3)),
                       margin: const EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.all(10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text(
-                            medaData.title,
+                            data['title'].toString(),
                             style: const TextStyle(
                                 color: Colors.black, fontSize: 20),
                           ),
                           Center(
-                            child: Image.network(
-                              medaData.image,
-                              width: 300,
-                              height: 180,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.network(
+                                data['image'].toString(),
+                                width: 300,
+                                height: 180,
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
-                  )
-                ]);
-              });
+                  ),
+                )
+              ]);
+            },
+          );
         },
       ),
     );
   }
-
-  // void _launchURL(String url) async =>
-  //     await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
 }
