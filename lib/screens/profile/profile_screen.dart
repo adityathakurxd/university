@@ -27,7 +27,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     final userData = Provider.of<UserData>(context, listen: false);
-    final mentorData; //TODO: get user data like social links from backend - define mentor model
+    //final mentorData; //Get user data like social links from backend - define mentor model
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
@@ -152,9 +152,9 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ),
                                   IconButton(
                                     iconSize: 30,
-                                    icon: const FaIcon(
+                                    icon: FaIcon(
                                       FontAwesomeIcons.linkedin,
-                                      color: Colors.blue,
+                                      color: Colors.blue[800],
                                     ),
                                     onPressed: () {
                                       launch('mentorData.linkedinLink');

@@ -6,7 +6,7 @@ class FirebaseAuthService {
   final _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  //TODO: Use a default image and name if user decides to sign in anonymously
+  //Use a default image and name if user decides to sign in anonymously
   UserData _userFromFirebase(User? user) {
     return UserData(
         uid: user!.uid,
@@ -26,7 +26,8 @@ class FirebaseAuthService {
 
   Future<UserData> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-    final GoogleSignInAuthentication googleAuth = await googleUser!.authentication;
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser!.authentication;
 
     final credential = GoogleAuthProvider.credential(
       accessToken: googleAuth.accessToken,

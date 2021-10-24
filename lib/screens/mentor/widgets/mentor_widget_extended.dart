@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MentorWidgetExtended extends StatelessWidget {
   final imageUrl =
@@ -7,6 +8,7 @@ class MentorWidgetExtended extends StatelessWidget {
   const MentorWidgetExtended({Key? key}) : super(key: key);
 
   @override
+  // ignore: dead_code
   Widget build(BuildContext context) {
     return SizedBox(
       height: 200,
@@ -53,25 +55,29 @@ class MentorWidgetExtended extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      InkWell(
-                        onTap: () {},
-                        child: Image.asset(
-                          'assets/github_icon.png',
-                        ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const FaIcon(FontAwesomeIcons.github),
+                        iconSize: 30,
+                        color: Colors.black,
                       ),
-                      InkWell(
-                        onTap: () {},
-                        child: Image.asset('assets/linkedin_icon.png'),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const FaIcon(FontAwesomeIcons.linkedin),
+                        iconSize: 30,
+                        color: Colors.blue[800],
                       ),
-                      InkWell(
-                        onTap: () {},
-                        child: Image.asset('assets/instagram_icon.png'),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const FaIcon(FontAwesomeIcons.instagram),
+                        iconSize: 30,
+                        color: Colors.deepPurpleAccent,
                       ),
                     ],
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

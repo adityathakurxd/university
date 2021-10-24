@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:university/constants/constants.dart';
 import 'package:university/services/embed_service.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class PathwayScreen extends StatefulWidget {
   const PathwayScreen({Key? key}) : super(key: key);
