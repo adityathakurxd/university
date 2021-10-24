@@ -1,24 +1,8 @@
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-import 'package:university/models/embed_model.dart';
+import 'package:metadata_fetch/metadata_fetch.dart';
 
 class EmbedService {
-  final baseUrl = 'v1.nocodeapi.com';
-
-  Future<MetaModel> getData(String src) async {
-    final url = Uri.https(
-        baseUrl, '/elyanan/link_preview/yVcPkTgLfyXzLzhH', {'url': src});
-    try {
-      final response = await http.get(url);
-      final json = jsonDecode(response.body);
-
-      final model = MetaModel.fromJson(json);
-
-      //print(model.author);
-
-      return model;
-    } catch (e) {
-      rethrow;
-    }
+  Future<Map<String, String?>> getMetaData(String src) async {
+    var data = await MetadataFetch.extract(src);
+    return data!.toMap();
   }
 }
