@@ -1,6 +1,17 @@
 # University
 Open Source app to view Free resources available online. The resources would be condesed into roadmaps provided by mentors skilled in their domains.
 <p>
+
+### Problem
+
+When starting with a new stack or technology, we often are misguided by YouTube videos and articles online into buying expensive courses on the pretext that everything would be available in one place.
+
+### Our Solution
+
+Today, learning is democratized. A lot of free videos, articles and GitHub examples are available to learn anything for absolutely FREE. Our goal is to structure these resources into roadmaps that can be taken up to master a skill.
+
+The roadmaps are provided by mentors skilled in their domain and cover everything they'd if they had to learn from scratch using these resources.
+
 Join the discussion on <b>Discord</b>:                                                                                                        
 <a href="https://discord.com/invite/mx5tjevvQd">
     <img src="https://img.shields.io/discord/768695045259264011?logo=discord&style=for-the-badge&color=blue" />
