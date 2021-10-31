@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:university/constants/constants.dart';
 import 'package:university/models/user_model.dart';
@@ -55,16 +56,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 ),
               ),
               GestureDetector(
-                onTap: () => Navigator.push(
+                onTap: () => Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => ProfilePage(
-                      name: userData.name,
-                      isMentor: false,
-                      imgUrl: userData.imgurl,
-                      email: userData.email,
-                    ),
-                  ),
+                  '/profile',
+                  arguments: [userData.name, false, userData.imgurl, userData.email],
                 ),
                 child: CircleAvatar(
                   backgroundImage: NetworkImage(userData.imgurl),
