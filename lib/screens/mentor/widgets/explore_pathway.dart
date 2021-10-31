@@ -42,8 +42,7 @@ class ExplorePathWay extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const PathwayScreen()));
+              Navigator.pushNamed(context, '/pathway');
             },
             child: Container(
               width: 300,

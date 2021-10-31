@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:university/auth_widget_builder.dart';
 import 'package:university/screens/auth/auth_widget.dart';
 import 'package:university/services/firebase_auth_service.dart';
+import 'package:university/services/route_generator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +33,8 @@ class MyApp extends StatelessWidget {
             child: AuthWidgetBuilder(builder: (context, userSnapshot) {
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
+                // initialRoute: '/',
+                onGenerateRoute: RouteGenerator.generate,
                 home: AuthWidget(userSnapshot: userSnapshot),
               );
             }),
