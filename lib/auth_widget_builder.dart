@@ -11,26 +11,26 @@ class AuthWidgetBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final authService =
-    Provider.of<FirebaseAuthService>(context, listen: false);
+        Provider.of<FirebaseAuthService>(context, listen: false);
     return StreamBuilder<UserData?>(
-    stream: authService.onAuthStateChanged,
-    builder: (context, snapshot) {
-      final UserData? user = snapshot.data;
-      if (user != null) {
-        return MultiProvider(
-          providers: [
-            //Provides user data across screens
-            Provider<UserData>.value(value: user),
-            //Provides Firestore service across screens
-            Provider<FirestoreService>(
-              create: (_) => FirestoreService(uid: user.uid),
-            ),
-          ],
-          child: builder(context, snapshot),
-        );
-      }
-      return builder(context, snapshot);
-    },
+      stream: authService.onAuthStateChanged,
+      builder: (context, snapshot) {
+        final UserData? user = snapshot.data;
+        if (user != null) {
+          return MultiProvider(
+            providers: [
+              //Provides user data across screens
+              Provider<UserData>.value(value: user),
+              //Provides Firestore service across screens
+              Provider<FirestoreService>(
+                create: (_) => FirestoreService(uid: user.uid),
+              ),
+            ],
+            child: builder(context, snapshot),
+          );
+        }
+        return builder(context, snapshot);
+      },
     );
   }
 }

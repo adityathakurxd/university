@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:university/constants/constants.dart';
 import 'package:university/models/user_model.dart';
 import 'package:university/screens/home/home_screen.dart';
 import 'package:university/screens/mentor/mentor_screen.dart';
-import 'package:university/screens/profile/profile_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -59,7 +57,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 onTap: () => Navigator.pushNamed(
                   context,
                   '/profile',
-                  arguments: [userData.name, false, userData.imgurl, userData.email],
+                  arguments: [
+                    userData.name,
+                    false,
+                    userData.imgurl,
+                    userData.email
+                  ],
                 ),
                 child: CircleAvatar(
                   backgroundImage: NetworkImage(userData.imgurl),

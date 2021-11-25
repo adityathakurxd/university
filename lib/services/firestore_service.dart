@@ -6,7 +6,7 @@ class FirestoreService {
   final String uid;
 
   final CollectionReference _userData =
-  FirebaseFirestore.instance.collection('user');
+      FirebaseFirestore.instance.collection('user');
 
   // Updates user data
   Future<void> updateUserData(UserData userData) async {

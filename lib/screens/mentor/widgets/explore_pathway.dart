@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:university/constants/constants.dart';
-import 'package:university/screens/pathway/pathway_screen.dart';
 
 class ExplorePathWay extends StatelessWidget {
   const ExplorePathWay({Key? key}) : super(key: key);
